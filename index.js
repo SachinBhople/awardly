@@ -17,8 +17,8 @@ app.use("/api/nomination", require("./routes/nominatin.routes"))
 app.use("/api/vote", require("./routes/voter.routes"))
 
 app.use("*", (req, res) => {
-    res.status(404).json({ message: "resource not found" })
-    // res.sendFile(path.join(__dirname, "dist", "index.html"))
+    // res.status(404).json({ message: "resource not found" })
+    res.sendFile(path.join(__dirname, "dist", "index.html"))
 })
 
 app.use((err, req, res, next) => {
